@@ -1,0 +1,1 @@
+llama-server -hf Qwen/Qwen2.5-0.5B-Instruct-GGUF --alias llm

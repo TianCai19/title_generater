@@ -19,22 +19,24 @@ def whisper_transcribe(audio_file, model_name="tiny", model_dir="models"):
         
     try:
         # 加载模型
+        print(f"[Whisper] 正在加载 {model_name} 模型...")
         model = whisper.load_model(model_name, download_root=model_dir)
+        print(f"[Whisper] 模型加载完成，使用模型: {model_name}")
         
         # 转录音频
+        print(f"[Whisper] 开始转录音频: {os.path.basename(audio_file)}")
         result = model.transcribe(audio_file)
-        
-        # 计算执行时间
+          # 计算执行时间
         end_time = time.time()
         execution_time = end_time - start_time
-        
-        print(f"音频转文本耗时: {execution_time:.2f} 秒")
+        print(f"[Whisper] 转录完成！")
+        print(f"[Whisper] 音频转文本耗时: {execution_time:.2f} 秒")
         return result["text"], execution_time
     
     except Exception as e:
         end_time = time.time()
-        print(f"转录过程中发生错误: {e}")
-        print(f"尝试耗时: {end_time - start_time:.2f} 秒")
+        print(f"[Whisper] 转录过程中发生错误: {e}")
+        print(f"[Whisper] 尝试耗时: {end_time - start_time:.2f} 秒")
         return None, end_time - start_time
 
 if __name__ == "__main__":

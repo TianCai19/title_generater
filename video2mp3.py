@@ -73,5 +73,5 @@ def video_to_mp3(input_file, output_file, bitrate="192k"):
 # 示例用法
 if __name__ == "__main__":
     input_video = "test_video.mp4"  # 替换为你的视频文件路径
-    output_audio = "myaudio.mp3"  # 替换为输出的 MP3 文件路径
+    output_audio = "test_audio.mp3"  # 替换为输出的 MP3 文件路径
     video_to_mp3(input_video, output_audio, bitrate="64k")
