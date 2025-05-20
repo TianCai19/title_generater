@@ -3,7 +3,7 @@ import os
 from video2mp3 import video_to_mp3
 from whisper_transcribe import whisper_transcribe
 
-def video_to_text(video_file, temp_audio_file="temp_audio.mp3", model_name="tiny", model_dir="models", bitrate="64k"):
+def video_to_text(video_file, temp_audio_file="temp_audio.mp3", model_name="turbo", model_dir="models", bitrate="64k"):
     """
     将视频文件转换为文本的完整流程（视频->音频->文本）
     :param video_file: 输入的视频文件路径

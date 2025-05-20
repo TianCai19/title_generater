@@ -1,10 +1,67 @@
 # Python-generated files
 __pycache__/
-*.py[oc]
+*.py[cod]
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
+*.so
+.Python
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+.installed.cfg
+*.egg
 
 # Virtual environments
 .venv
+venv/
+ENV/
+env/
+.env/
+
+# Audio and video files (exclude if they're large files that shouldn't be in version control)
+*.mp3
+*.mp4
+*.wav
+*.ogg
+*.flac
+*.avi
+*.mkv
+
+# Model files (can be large)
+models/*.pt
+*.pth
+*.onnx
+*.bin
+
+# IDE-related files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.conda
+models/*
