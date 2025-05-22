@@ -40,7 +40,7 @@ def title_generate():
     if not video_b64:
         return jsonify({"success": False, "error": "Missing video data"}), 400
     
-    keep_intermediate_files = data.get('keep_intermediate_files', True)
+    keep_intermediate_files = data.get('keep_intermediate_files', False)
 
     temp_video_path = None # Initialize to None
     try:
@@ -56,7 +56,7 @@ def title_generate():
             video_file=temp_video_path,
             whisper_model="tiny",
             model_dir="../models", # This path is relative to restful/app.py, adjust if pipeline expects absolute or different relative
-            title_prompt="根据以下视频内容，生成一个简短且吸引人的标题:",
+            title_prompt="../prompts/prompt.txt", # This path is relative to restful/app.py
             # save_transcript is True by default in pipeline, so intermediate text files will be created 
             # and then handled by keep_intermediate_files logic within the pipeline.
             # No need to set save_transcript=False here unless specifically intended to never save them.
