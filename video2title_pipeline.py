@@ -96,7 +96,7 @@ def video2title_pipeline(video_file,
     
     # 步骤3: 文本生成标题
     print(f"\n[步骤 3/3] 根据转录文本生成标题")
-    title = generate_title(prompt=title_prompt, text=transcript_file)
+    title = generate_title(prompt=title_prompt, text=transcript)
     
     if title:
         result["title"] = title
