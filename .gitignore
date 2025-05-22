@@ -65,3 +65,4 @@ ehthumbs.db
 Thumbs.db
 .conda
 models/*
+logs/*
