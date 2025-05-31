@@ -2,7 +2,7 @@ import subprocess
 import os
 import time
 
-def video_to_mp3(input_file, output_file, bitrate="192k", start_time=None, duration=None):
+def video_to_mp3(input_file, output_file, bitrate="192k", start_time=5, duration=60):
     """
     将视频文件转换为 MP3 音频文件，支持裁剪指定时间段。
     :param input_file: 输入的视频文件路径
